@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+<h1>Enter a new task</h1>
+
+<form action="#" method="POST" th:action="@{/addTask}" th:object="${task}">
+    <input type="text" placeholder="task description" th:field="*{text}"/>
+    Urgent? <input type="checkbox" th:field="*{urgent}"/>
+    <br>
+    <button id="add-task">Add Task</button>
+
+</form>
+
+<a href="/allTasks">All Tasks</a>
+
+</body>
+</html>
